@@ -112,9 +112,28 @@ $(document).ready(function(){
     var newPizzaOrder = new PizzaOrder(pizzaSizeInput, pizzaDoughInput, pizzaSauceInput, pizzaToppingArray);
     var pizzaCost = newPizzaOrder.CalculatePizzaCost();
 
-    $("#total-cost").text(pizzaCost);
+    $(".total-cost").text(pizzaCost);
+    $("#result, #place-order").show();
+
+    $("#place-order").click(function(){
+      $("#form-one, #gallery").hide();
+      $("#delivery").show();
+      $("#get-receipt").click(function(event){
+        var nameInput = $("#name").val();
+        var phoneInput = parseInt($("#phone").val());
+        $("#r-date").text(new Date());
+        $("#r-number").text(Math.floor(Math.random() * 200));
+        $("#r-name").text(nameInput);
+        $("#r-phone").text(phoneInput);
+        $(".receipt").show();
+
+        event.preventDefault();
+
+      });
+    });
 
     event.preventDefault();
+
   });
 
 

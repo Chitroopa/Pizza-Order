@@ -9,8 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">Pizza Order</h1>
-      <div class="gallery row">
+      <h1 class="jumbotron jumbotron-style">Seattle Pizza</h1>
+      <p class="para-style">Enjoy our fresh and homemade, award-winning pizzas, subs, Gyros and pasta for your next meal. We are the home of the Gourmet pizza and pasta.</p>
+      <div class="row" id="gallery">
       	<div class="main_image col-md-6">
       		<img src="img/pizza1.jpeg" />
       	</div>
@@ -55,6 +56,8 @@
       </div>
       <form id="form-one">
         <br><br>
+        <h4>Make your own Pizza</h4><br>
+        <p class="para-style">Select your ingredients</p>
         <div class="row row-style">
           <div class="col-md-4 col-style">
             <h5 class="title-style">Pizza Size</h5>
@@ -142,11 +145,10 @@
                 Sweet chilli
               </label>
             </div>
-
           </div>
 
         </div>
-        <div class="form-group">
+        <div class="form-group"><br>
           <h4>Pizza Topping</h4><br>
           <div class="row row-style">
             <div class="col-md-3 col-style">
@@ -211,16 +213,69 @@
             </div>
           </div>
           <div class="row row-style">
-            <div class="col-md-12 col-style1">
-              <button type="submit" class="btn bg-primary">Calculate Cost!</button>
+            <div class="col-md-12" id="result"><br>
+              <h4>Your Pizza Cost is : $<span class="total-cost"></span></h4>
+            </div>
+            <div class="col-md-4 col-style1">
+              <button type="submit" class="btn btn-primary active bg-success">Calculate Cost!</button>
+            </div>
+            <div class="col-md-4 col-style1">
+              <button type="click" class="btn btn-primary active bg-warning" id="place-order">Place order!</button>
+            </div>
+            <div class="col-md-4 col-style1">
+              <a href="teststyle.html" class="btn btn-primary active bg-success" class="reset" role="button" aria-pressed="true">Reset selected options</a>
             </div>
           </div>
         </div>
       </form>
-      <div class="result">
-        <p>Your Pizza Cost is : $<span id="total-cost"></span></p>
-        <a href="teststyle.html" class="btn btn-primary active bg-success" id="reset" role="button" aria-pressed="true">Reset selected options</a>
+      <div class="row" id="delivery">
+        <div class="col-md-12">
+          <form class="jumbotron">
+            <h1>Place order</h1>
+            <p>Please fill the below information</p>
+            <h6>Your Pizza Cost is : $<span class="total-cost"></span></h6>
+            <br>
+            <div class="form-group row">
+              <label for="name" class="col-sm-2">Name</label>
+              <div class="col-sm-6">
+                <input id="name" type="text" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="phone" class="col-sm-2">Phone number</label>
+              <div class="col-sm-6">
+                <input id="phone" type="number" class="form-control" required>
+              </div>
+            </div>
+            <button type="click" class="btn btn-primary active bg-primary" id="get-receipt">Get Receipt!</button>
+          </form>
+        </div>
       </div>
+      <div class="receipt jumbotron">
+        <p id="receipt-header">Seattle Pizza</p>
+        <div class="row">
+          <p class="col-sm-2">Receipt#:</p>
+          <div class="col-sm-6">
+            <p id="r-number"></p>
+          </div>
+        </div>
+        <p id="r-date"></p>
+        <div class="row">
+          <p class="col-sm-2">Name:</p>
+          <div class="col-sm-6">
+            <p id="r-name"></p>
+          </div>
+        </div>
+        <div class="row">
+          <p class="col-sm-2">Phone:</p>
+          <div class="col-sm-6">
+            <p id="r-phone"></p>
+          </div>
+        </div>
+        <p>Your custom made pizza will be ready for pick up in 45 mins. Please show this recepit counter.</p>
+        <a href="teststyle.html" class="btn btn-primary active bg-primary" class="reset" role="button" aria-pressed="true">Home</a>
+      </div>
+
     </div>
   </body>
 </html>
