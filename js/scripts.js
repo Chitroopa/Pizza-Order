@@ -22,7 +22,15 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
   {
     this.pizzaCost += 8.25
   }
-  return this.pizzaCost;
+  for(var i=0;i<this.pizzaTopping.length;i++)
+  {
+    if(this.pizzaTopping[i] === "cheese1")
+    {
+      this.pizzaCost += 1.19
+    }
+  }
+
+  return this.pizzaCost.toFixed(2);
 }
 
 
