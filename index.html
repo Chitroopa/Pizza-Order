@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Ping pong</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="jumbotron">Pizza Order</h1>
+      <form id="form-one">
+        <div class="form-group">
+          <h4>Pizza Size</h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="s" checked>
+              Small 8"
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="m">
+              Medium 12"
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="l">
+              Large 14"
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="xl">
+              X-Large 16"
+            </label>
+          </div>
+          <h4>Pizza Topping</h4>
+          <h5>Veggies</h5>
+          <input type="checkbox" name="topping" value="01">Veggies(Roma Tomatoes, Bannana Pepper, Red onions, Mushrooms)<br>
+          <input type="checkbox" name="topping" value="02">Roma Tomatoes<br>
+          <input type="checkbox" name="topping" value="02">Pineapple<br>
+          <input type="checkbox" name="topping" value="02">Red Onions<br>
+          <input type="checkbox" name="topping" value="02">Spinach<br>
+          <input type="checkbox" name="topping" value="02">Broccoli<br>
+          <h5>Meats</h5>
+          <input type="checkbox" name="topping" value="04">Pepperoni<br>
+          <h5>Cheese</h5>
+          <input type="checkbox" name="topping" value="06">Cheese<br>
+          <button type="submit" class="btn bg-primary">Calculate Cost!</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
