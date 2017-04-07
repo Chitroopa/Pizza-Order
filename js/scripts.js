@@ -1,6 +1,7 @@
 //Business Logic
-function PizzaOrder (size, topping) {
+function PizzaOrder (size, dough, topping) {
   this.pizzaSize = size;
+  this.pizzaDough = dough;
   this.pizzaTopping = topping;
   this.pizzaCost = 0;
 }
@@ -21,6 +22,22 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
   else if(this.pizzaSize === 'xl')
   {
     this.pizzaCost += 8.25
+  }
+  else if(this.pizzaSize === 'xl')
+  {
+    this.pizzaCost += 8.25
+  }
+  if(this.pizzaDough === 'dough1')
+  {
+    this.pizzaCost += 1
+  }
+  else if(this.pizzaDough === 'dough2')
+  {
+    this.pizzaCost += 2
+  }
+  else if(this.pizzaDough === 'dough3')
+  {
+    this.pizzaCost += 3
   }
   for(var i=0;i<this.pizzaTopping.length;i++)
   {
@@ -82,15 +99,17 @@ $(document).ready(function(){
 
     var pizzaToppingArray = [];
     var pizzaSizeInput = $("input:radio[name=pizza-size]:checked").val();
+    var pizzaDoughInput = $("input:radio[name=pizza-dough]:checked").val();
     $("input:checkbox[name=topping]:checked").each(function(){
       pizzaToppingArray.push($(this).val());
     });
 
-    var newPizzaOrder = new PizzaOrder(pizzaSizeInput, pizzaToppingArray);
+    var newPizzaOrder = new PizzaOrder(pizzaSizeInput, pizzaDoughInput, pizzaToppingArray);
     var pizzaCost = newPizzaOrder.CalculatePizzaCost();
 
     $("#total-cost").text(pizzaCost);
 
     event.preventDefault();
   });
+
 });

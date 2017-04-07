@@ -36,6 +36,25 @@
               X-Large 16"
             </label>
           </div>
+          <h4>Pizza Dough</h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-dough" value="dough1" checked>
+              Classic Dough
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-dough" value="dough2">
+              Whole Grain Dough
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-dough" value="dough3">
+              Gluten Free Dough
+            </label>
+          </div>
           <h4>Pizza Topping</h4><br>
           <h5>Cheese</h5>
           <input type="checkbox" name="topping" value="cheese1" checked>Cheese<br>
@@ -99,6 +118,7 @@
           <input type="checkbox" name="topping" value="sauce2">Sweet chilli Sauce<br><br>
 
           <button type="submit" class="btn bg-primary">Calculate Cost!</button>
+          <a href="index.html" class="btn btn-primary active bg-success" id="reset" role="button" aria-pressed="true">Reset selected options</a>
         </div>
       </form>
       <div class="result">
