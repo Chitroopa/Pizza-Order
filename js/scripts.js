@@ -10,6 +10,18 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
   {
     this.pizzaCost += 3.25
   }
+  else if(this.pizzaSize === 'm')
+  {
+    this.pizzaCost += 4.25
+  }
+  else if(this.pizzaSize === 'l')
+  {
+    this.pizzaCost += 6.25
+  }
+  else if(this.pizzaSize === 'xl')
+  {
+    this.pizzaCost += 8.25
+  }
   return this.pizzaCost;
 }
 
