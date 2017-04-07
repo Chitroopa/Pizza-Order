@@ -28,6 +28,14 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
     {
       this.pizzaCost += 1.19
     }
+    else if(this.pizzaTopping[i] === "cheese2")
+    {
+      this.pizzaCost += 1.05
+    }
+    else if(this.pizzaTopping[i] === "cheese3")
+    {
+      this.pizzaCost += 1.99
+    }
     else if(this.pizzaTopping[i] === "veg1")
     {
       this.pizzaCost += 2.25
@@ -36,16 +44,37 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
     {
       this.pizzaCost += 1.14
     }
+    else if(this.pizzaTopping[i] === "veg3")
+    {
+      this.pizzaCost += 1.45
+    }
     else if(this.pizzaTopping[i] === "meat1")
     {
       this.pizzaCost += 2.15
     }
+    else if(this.pizzaTopping[i] === "meat2")
+    {
+      this.pizzaCost += 2.75
+    }
+    else if(this.pizzaTopping[i] === "herb1")
+    {
+      this.pizzaCost += 0.30
+    }
+    else if(this.pizzaTopping[i] === "herb2")
+    {
+      this.pizzaCost += 0.10
+    }
+    else if(this.pizzaTopping[i] === "sauce1")
+    {
+      this.pizzaCost += 0.50
+    }
+    else if(this.pizzaTopping[i] === "sauce2")
+    {
+      this.pizzaCost += 0.75
+    }
   }
-
   return this.pizzaCost.toFixed(2);
 }
-
-
 
 //User Interface Logic
 $(document).ready(function(){
@@ -57,11 +86,10 @@ $(document).ready(function(){
       pizzaToppingArray.push($(this).val());
     });
 
-    console.log(pizzaSizeInput, pizzaToppingArray);
+    var newPizzaOrder = new PizzaOrder(pizzaSizeInput, pizzaToppingArray);
+    var pizzaCost = newPizzaOrder.CalculatePizzaCost();
 
-      var newPizzaOrder = new PizzaOrder(pizzaSizeInput, pizzaToppingArray);
-      console.log(newPizzaOrder);
-      console.log("$"+newPizzaOrder.CalculatePizzaCost());
+    $("#total-cost").text(pizzaCost);
 
     event.preventDefault();
   });
