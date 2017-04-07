@@ -28,6 +28,18 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
     {
       this.pizzaCost += 1.19
     }
+    else if(this.pizzaTopping[i] === "veg1")
+    {
+      this.pizzaCost += 2.25
+    }
+    else if(this.pizzaTopping[i] === "veg2")
+    {
+      this.pizzaCost += 1.14
+    }
+    else if(this.pizzaTopping[i] === "meat1")
+    {
+      this.pizzaCost += 2.15
+    }
   }
 
   return this.pizzaCost.toFixed(2);
