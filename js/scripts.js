@@ -96,6 +96,9 @@ PizzaOrder.prototype.CalculatePizzaCost = function() {
 
 //User Interface Logic
 $(document).ready(function(){
+    $(".thumb").hover(function(){
+      $(".main_image img").attr('src',$(this).children('img').attr('src'));
+    });
   $("#form-one").submit(function(event){
 
     var pizzaToppingArray = [];

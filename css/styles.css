@@ -12,3 +12,39 @@
 .col-style1 {
   padding: 30px 30px 10px 500px;
 }
+.main_image{
+	width:48%;
+	display:inline-block;
+	border:3px solid #eee;
+}
+.main_image img{
+	width:100%;
+  height:100%;
+  margin-top:0;
+}
+.selection_image{
+	width:48%;
+	display:inline-block;
+}
+.thumb {
+	position:relative;
+	width:25%;
+	height:25%;
+	display:inline-block;
+	margin:2px;
+	border:4px solid #eee;
+	outline:1px solid #ddd;
+	}
+.thumb:hover .overlay {
+	opacity:0!important;
+	cursor:pointer;
+}
+.overlay {
+	position:absolute;
+	top:0;left:0;width:100%;height:100%;
+	background:#000;opacity:0.4;
+}
+.selection_image img {
+	width:100%;
+	height:100%;
+}
