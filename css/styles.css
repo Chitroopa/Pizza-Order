@@ -1,0 +1,14 @@
+.col-style {
+  border: 1px solid green;
+  background-color: lightyellow;
+}
+.title-style {
+  border-bottom: 1px solid green;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 4px;
+  background-color: lightblue;
+}
+.col-style1 {
+  padding: 30px 30px 10px 500px;
+}
