@@ -120,7 +120,7 @@ $(document).ready(function(){
       $("#delivery").show();
       $("#get-receipt").click(function(event){
         var nameInput = $("#name").val();
-        var phoneInput = parseInt($("#phone").val());
+        var phoneInput = $("#phone").val();
         $("#r-date").text(new Date());
         $("#r-number").text(Math.floor(Math.random() * 200));
         $("#r-name").text(nameInput);
@@ -128,13 +128,8 @@ $(document).ready(function(){
         $(".receipt").show();
 
         event.preventDefault();
-
       });
     });
-
     event.preventDefault();
-
   });
-
-
 });

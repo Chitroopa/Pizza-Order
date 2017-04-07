@@ -1,8 +1,6 @@
 .col-style {
   border: 3px solid white;
-  /*background-color: #808287;*/
   background-color: #f1f2f3;
-
 }
 .title-style {
   border-bottom: 1px solid green;
@@ -87,4 +85,7 @@ h4 {
 #r-date {
   font-style: italic;
   font-family: sans-serif;
+}
+.r-label {
+  font-weight: bold;
 }
